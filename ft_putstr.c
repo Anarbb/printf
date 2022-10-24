@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 10:47:50 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/10/24 13:23:33 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:09:09 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr(char *s, int *len)
 {
 	if (!s)
 		s = "(null)";
-	while(*s)
+	while (*s)
 	{
 		ft_putchar(*s, len);
 		s++;

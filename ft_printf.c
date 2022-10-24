@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:17:19 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/10/24 13:47:31 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:09:01 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_checks(va_list ap, const char c, int *len)
 	else if (c == 'u')
 		ft_putnbr_u(va_arg(ap, unsigned int), len);
 	else if (c == 's')
-		ft_putstr(va_arg(ap, char*), len);
+		ft_putstr(va_arg(ap, char *), len);
 	else if (c == 'x')
 		ft_putnbr_b(va_arg(ap, size_t), "0123456789abcdef", len);
 	else if (c == 'X')
@@ -27,7 +27,7 @@ static void	ft_checks(va_list ap, const char c, int *len)
 	else if (c == '%')
 		ft_putchar('%', len);
 	else if (c == 'p')
-		ft_putmem(va_arg(ap, void*), len);
+		ft_putmem(va_arg(ap, void *), len);
 	else if (c == 'c')
 		ft_putchar(va_arg(ap, int), len);
 }
@@ -36,7 +36,7 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	ap;
 	int		len;
-	
+
 	len = 0;
 	va_start(ap, str);
 	while (*str)

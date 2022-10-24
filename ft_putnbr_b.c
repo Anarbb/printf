@@ -6,15 +6,15 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 11:18:56 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/10/24 14:18:09 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:08:49 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -26,7 +26,6 @@ void	ft_putnbr_b(unsigned int nbr, char *base, int *len)
 {
 	unsigned int	base_len;
 
-	
 	base_len = ft_strlen(base);
 	if (nbr < base_len)
 		ft_putchar(base[nbr], len);
