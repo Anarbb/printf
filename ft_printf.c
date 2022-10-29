@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:17:19 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/10/27 17:10:54 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/10/28 14:11:00 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static void	ft_checks(va_list ap, const char c, int *len)
 		ft_putmem(va_arg(ap, void *), len);
 	else if (c == 'c')
 		ft_putchar(va_arg(ap, int), len);
+	else
+		ft_putchar(c, len);
 }
 
 int	ft_printf(const char *str, ...)
@@ -41,6 +43,8 @@ int	ft_printf(const char *str, ...)
 	va_start(ap, str);
 	while (*str)
 	{
+		if (*str == '%' && !str[1])
+			break ;
 		if (*str == '%')
 		{
 			str++;
